@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Pattern Sense</title>
+    <style>
+        /* Basic CSS for the layout and appearance, consistent with home.html */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .header {
+            background-color: #3f5d68; /* Dark blue-gray for the header */
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+        .header .nav-links {
+            margin-right: 50px;
+        }
+        .header .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+        .header .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding-top: 80px; /* Space for fixed header */
+            min-height: calc(100vh - 120px); /* Adjust to make footer stick to bottom */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-section {
+            padding: 80px 50px;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 20px auto; /* Center the section with some margin */
+            max-width: 1200px; /* Limit width for better readability */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .about-section h1 {
+            font-size: 48px;
+            color: #3f5d68;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-discover-textile {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            gap: 50px;
+            padding: 40px 0; /* Reduced padding for internal section */
+        }
+        .section-discover-textile .left-content {
+            flex: 1;
+            min-width: 300px; /* Ensure content doesn't get too narrow */
+            max-width: 500px;
+        }
+        .section-discover-textile .left-content h2 {
+            font-size: 40px;
+            color: #3f5d68;
+            margin-bottom: 20px;
+        }
+        .section-discover-textile .left-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .section-discover-textile .right-content {
+            flex: 1.2;
+            min-width: 350px; /* Ensure content doesn't get too narrow */
+            text-align: left;
+            max-width: 600px;
+        }
+        .section-discover-textile .right-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        .section-discover-textile .right-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .section-discover-textile .right-content ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+            position: relative;
+            padding-left: 25px;
+        }
+        .section-discover-textile .right-content ul li::before {
+            content: '✓';
+            color: #28a745; /* Green checkmark */
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .section-discover-textile .right-content .description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header .logo {
+                margin-left: 20px;
+            }
+            .header .nav-links {
+                margin-right: 20px;
+            }
+            .header .nav-links a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+            .about-section {
+                padding: 40px 20px;
+            }
+            .about-section h1 {
+                font-size: 36px;
+            }
+            .section-discover-textile {
+                flex-direction: column;
+                gap: 30px;
+                padding: 20px 0;
+            }
+            .section-discover-textile .left-content,
+            .section-discover-textile .right-content {
+                max-width: 90%; /* Adjust width for smaller screens */
+                min-width: unset;
+            }
+            .section-discover-textile .left-content h2 {
+                font-size: 32px;
+            }
+            .section-discover-textile .left-content p,
+            .section-discover-textile .right-content p,
+            .section-discover-textile .right-content ul li,
+            .section-discover-textile .right-content .description {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">PATTERN SENSE</div>
+        <nav class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="predict.html">GET STARTED</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section class="about-section">
+            <h1>About Pattern Sense</h1>
+            <div class="section-discover-textile">
+                <div class="left-content">
+                    <h2>DISCOVER TEXTILE <br> ELEGANCE: PATTERN <br> SENSE UNVEILED.</h2>
+                    <p>With a blend of cutting-edge CNN technology and creative flair, this project delves into the rich tapestry of textile design, aiming to classify and decode an array of captivating patterns.</p>
+                </div>
+                <div class="right-content">
+                    <p>By meticulously analyzing diverse datasets, "Pattern Sense" endeavors to unravel the distinct motifs, colors, and structures that define each fabric pattern. From timeless classics like paisley and houndstooth to contemporary marvels inspired by nature, this project navigates the intricate nuances of textile aesthetics with precision and insight.</p>
+                    <ul>
+                        <li>Inspires designers with a vast array of categorized patterns for creative exploration.</li>
+                        <li>Utilizes advanced CNNs to accurately classify various patterned fabrics.</li>
+                        <li>Ensures consistency and quality in textile production by detecting pattern variations.</li>
+                    </ul>
+                    <p class="description">Empowered by state-of-the-art convolutional neural networks, "Pattern Sense" offers a glimpse into the captivating world of textile design. Imagine effortlessly discerning between florals, geometrics, and abstract prints, all through the lens of advanced image recognition technology.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pattern Sense. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Pattern</title>
+    <style>
+        /* Basic CSS for the layout and appearance, consistent with other pages */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .header {
+            background-color: #3f5d68; /* Dark blue-gray for the header */
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+        .header .nav-links {
+            margin-right: 50px;
+        }
+        .header .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+        .header .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding-top: 80px; /* Space for fixed header */
+            min-height: calc(100vh - 120px); /* Adjust to make footer stick to bottom */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+
+        .predict-section {
+            width: 100%;
+            max-width: 800px;
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .predict-section h1 {
+            font-size: 48px;
+            color: #3f5d68;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .upload-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .file-input-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            border: 2px dashed #ccc;
+            padding: 40px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .file-input-container:hover {
+            border-color: #3f5d68;
+        }
+
+        .file-input-container input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .file-input-container p {
+            font-size: 18px;
+            color: #777;
+            margin: 0;
+        }
+
+        .file-input-container .icon {
+            font-size: 40px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            background-color: #007bff; /* Blue button */
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header .logo {
+                margin-left: 20px;
+            }
+            .header .nav-links {
+                margin-right: 20px;
+            }
+            .header .nav-links a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+            .predict-section {
+                padding: 30px 15px;
+                margin-top: 20px;
+            }
+            .predict-section h1 {
+                font-size: 36px;
+            }
+            .file-input-container {
+                padding: 30px 15px;
+            }
+            .file-input-container p {
+                font-size: 16px;
+            }
+            .file-input-container .icon {
+                font-size: 30px;
+            }
+            .submit-btn {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">PATTERN SENSE</div>
+        <nav class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="predict.html">GET STARTED</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section class="predict-section">
+            <h1>Predict Textile Pattern</h1>
+            <p>Upload an image of a textile to predict its pattern.</p>
+            <form action="predict.html" method="post" enctype="multipart/form-data" class="upload-form">
+                <div class="file-input-container">
+                    <span class="icon">⬆️</span>
+                    <p>Drag & Drop your image here or Click to Browse</p>
+                    <input type="file" name="file" id="imageUpload" accept="image/*" required>
+                </div>
+                <button type="submit" class="submit-btn">Upload and Predict</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pattern Sense. All rights reserved.</p>
+    </footer>
+</body>
+</html>

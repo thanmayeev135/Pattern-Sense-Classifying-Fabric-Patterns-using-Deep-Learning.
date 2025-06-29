@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Pattern Sense</title>
+    <style>
+        /* Basic CSS for the layout and appearance, consistent with other pages */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .header {
+            background-color: #3f5d68; /* Dark blue-gray for the header */
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+        .header .nav-links {
+            margin-right: 50px;
+        }
+        .header .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+        .header .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding-top: 80px; /* Space for fixed header */
+            min-height: calc(100vh - 120px); /* Adjust to make footer stick to bottom */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-bottom: 40px; /* Space before footer */
+        }
+
+        .contact-section {
+            width: 100%;
+            max-width: 1200px;
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-section h1 {
+            font-size: 48px;
+            color: #3f5d68;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-section p.subtitle {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .map-container {
+            width: 90%;
+            max-width: 900px;
+            height: 400px; /* Fixed height for the map */
+            background-color: #e0e0e0; /* Placeholder for the map */
+            border-radius: 8px;
+            margin: 0 auto 50px;
+            overflow: hidden; /* Ensure content stays within bounds */
+        }
+        .map-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the container without distortion */
+            border-radius: 8px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .contact-item {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: left;
+            border-top: 3px solid #3f5d68;
+        }
+
+        .contact-item h3 {
+            font-size: 22px;
+            color: #3f5d68;
+            margin-bottom: 15px;
+        }
+
+        .contact-item p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header .logo {
+                margin-left: 20px;
+            }
+            .header .nav-links {
+                margin-right: 20px;
+            }
+            .header .nav-links a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+            .contact-section {
+                padding: 30px 15px;
+                margin-top: 20px;
+            }
+            .contact-section h1 {
+                font-size: 36px;
+            }
+            .contact-section p.subtitle {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+            .map-container {
+                height: 300px;
+                width: 95%;
+            }
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .contact-item {
+                min-width: unset;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">PATTERN SENSE</div>
+        <nav class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="predict.html">GET STARTED</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section class="contact-section">
+            <h1>Contact</h1>
+            <p class="subtitle">contact us for more queries.</p>
+
+            <div class="map-container">
+                <!-- Placeholder for Google Maps iframe or image -->
+                <!-- You would typically embed a Google Maps iframe here -->
+                <img src="fabric2.jpeg" alt="Map Location" class="map-image">
+            </div>
+
+            <div class="contact-details">
+                <div class="contact-item">
+                    <h3>Location:</h3>
+                    <p>40-13-88</p>
+                    <p>Hyderabad, 535022</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email:</h3>
+                    <p>info@example.com</p>
+                    <p>contact@example.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Call:</h3>
+                    <p>+1 5589 55488 51</p>
+                    <p>+1 5589 22475 14</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pattern Sense. All rights reserved.</p>
+    </footer>
+</body>
+</html>

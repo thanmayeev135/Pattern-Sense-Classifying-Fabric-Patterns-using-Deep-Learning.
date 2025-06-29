@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <style>
+        /* Basic CSS for consistency */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .header {
+            background-color: #3f5d68;
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+        .header .nav-links {
+            margin-right: 50px;
+        }
+        .header .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+        .header .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding-top: 80px; /* Space for fixed header */
+            min-height: calc(100vh - 120px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+
+        .results-section {
+            width: 100%;
+            max-width: 800px;
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .results-section h1 {
+            font-size: 48px;
+            color: #3f5d68;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .result-box {
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            word-wrap: break-word; /* Ensure long text wraps */
+        }
+
+        .result-box p {
+            font-size: 22px;
+            color: #333;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .uploaded-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 300px; /* Limit image height */
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header .logo {
+                margin-left: 20px;
+            }
+            .header .nav-links {
+                margin-right: 20px;
+            }
+            .header .nav-links a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+            .results-section {
+                padding: 30px 15px;
+                margin-top: 20px;
+            }
+            .results-section h1 {
+                font-size: 36px;
+            }
+            .result-box p {
+                font-size: 18px;
+            }
+            .uploaded-image {
+                max-height: 200px;
+            }
+            .back-button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">PATTERN SENSE</div>
+        <nav class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="predict.html">GET STARTED</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section class="results-section">
+            <h1>Prediction Results</h1>
+            <div class="result-box">
+                <p>{{ prediction_result | safe }}</p>
+                {% if uploaded_image_url %}
+                    <img src="{{ uploaded_image_url }}" alt="Uploaded Image" class="uploaded-image">
+                {% endif %}
+            </div>
+            <a href="predict.html" class="back-button">Upload Another Image</a>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pattern Sense. All rights reserved.</p>
+    </footer>
+</body>
+</html>

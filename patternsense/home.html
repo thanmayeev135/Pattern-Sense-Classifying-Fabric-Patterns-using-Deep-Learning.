@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Sense</title>
+    <style>
+        /* Basic CSS for the layout and appearance */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #3f5d68; /* Dark blue-gray for the header */
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+        .header .nav-links {
+            margin-right: 50px;
+        }
+        .header .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+        .header .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-image: url('fabric1.png'); /* Placeholder image, replace with your actual background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 20px 100px; /* Adjust padding as needed */
+            position: relative;
+            margin-top: 60px; /* To account for fixed header */
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero .btn {
+            background-color: #007bff; /* Blue button */
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .hero .btn:hover {
+            background-color: #0056b3;
+        }
+        .section {
+            padding: 80px 50px;
+            text-align: center;
+        }
+        .section-discover-textile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            gap: 50px;
+            padding: 80px 100px;
+            background-color: #ffffff;
+        }
+        .section-discover-textile .left-content {
+            flex: 1;
+            max-width: 500px;
+        }
+        .section-discover-textile .left-content h2 {
+            font-size: 40px;
+            color: #3f5d68;
+            margin-bottom: 20px;
+        }
+        .section-discover-textile .left-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .section-discover-textile .right-content {
+            flex: 1.2;
+            text-align: left;
+            max-width: 600px;
+        }
+        .section-discover-textile .right-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        .section-discover-textile .right-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .section-discover-textile .right-content ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+            position: relative;
+            padding-left: 25px;
+        }
+        .section-discover-textile .right-content ul li::before {
+            content: '✓';
+            color: #28a745; /* Green checkmark */
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .section-discover-textile .right-content .description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">PATTERN SENSE</div>
+        <nav class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a> <a href="predict.html">GET STARTED</a> </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>EASY START WITH PATTERN SENSE</h1>
+            <p>"Pattern Sense" harnesses cutting-edge convolutional neural networks to unveil the enchanting realm of textile design.</p>
+            <a href="predict.html" class="btn">GET STARTED</a>
+        </div>
+    </section>
+
+    <section class="section-discover-textile">
+        <div class="left-content">
+            <h2>DISCOVER TEXTILE <br> ELEGANCE: PATTERN <br> SENSE UNVEILED.</h2>
+            <p>With a blend of cutting-edge CNN technology and creative flair, this project delves into the rich tapestry of textile design, aiming to classify and decode an array of captivating patterns.</p>
+        </div>
+        <div class="right-content">
+            <p>By meticulously analyzing diverse datasets, "Pattern Sense" endeavors to unravel the distinct motifs, colors, and structures that define each fabric pattern. From timeless classics like paisley and houndstooth to contemporary marvels inspired by nature, this project navigates the intricate nuances of textile aesthetics with precision and insight.</p>
+            <ul>
+                <li>Inspires designers with a vast array of categorized patterns for creative exploration.</li>
+                <li>Utilizes advanced CNNs to accurately classify various patterned fabrics.</li>
+                <li>Ensures consistency and quality in textile production by detecting pattern variations.</li>
+            </ul>
+            <p class="description">Empowered by state-of-the-art convolutional neural networks, "Pattern Sense" offers a glimpse into the captivating world of textile design. Imagine effortlessly discerning between florals, geometrics, and abstract prints, all through the lens of advanced image recognition technology.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pattern Sense. All rights reserved.</p>
+    </footer>
+</body>
+</html>
