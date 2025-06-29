@@ -1,0 +1,2 @@
+# Pattern-Sense-Classifying-Fabric-Patterns-using-Deep-Learning.
+This project, "Pattern Sense: Classifying Fabric Patterns using Deep Learning," is designed to automate the process of identifying and categorizing various fabric patterns using advanced deep learning techniques.   The system aims to streamline pattern recognition tasks across industries such as fashion, textiles, and interior design
